@@ -13,13 +13,13 @@ class WeatherList extends Component {
       <tr key={ name }>
         <td>{ name }</td>
         <td>
-          <Chart data={temps} color="orange" className="TEST"/>
+          <Chart data={temps} color="orange" units="K"/>
         </td>
         <td>
-          <Chart data={pressures} color="green" />
+          <Chart data={pressures} color="green" units="HPa"/>
         </td>
         <td>
-          <Chart data={humidities} color="blue" />
+          <Chart data={humidities} color="blue" units="%"/>
         </td>
       </tr>
     );
@@ -27,7 +27,7 @@ class WeatherList extends Component {
 
   render() {
     return (
-      <table className="table table-hover">
+      <table className="table table-hover text">
         <thead>
           <tr>
             <th>City</th>
